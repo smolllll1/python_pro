@@ -1,0 +1,79 @@
+main{
+	background-color: #B3AFAF;
+	margin-left: 200px;
+	margin-right: 200px;
+	height: 530px;
+	padding-top: 20px;
+}
+form{
+	background-color: white;
+	width: 400px;
+	height: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 15px;
+}
+input{
+	border: none;
+}
+#Text_vhody{
+	font-size: 30px;
+	text-align: center;
+	padding-top: 70px;
+}
+.password{
+	width: 300px;
+	margin: 40px auto;
+	position: relative;
+}
+.password-input{
+	width: 100%;
+	padding: 5px 0;
+	height: 30px;
+	font-size: 18px;
+	border-bottom: 2px solid #B3AFAF;
+}
+.email_input{
+	width: 100%;
+	padding: 5px 0;
+	height: 30px;
+	font-size: 18px;
+	border-bottom: 2px solid #B3AFAF;
+}
+.password-control {
+	position: absolute;
+	top: 11px;
+	right: 6px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url(./img/view.svg) 0 0 no-repeat ;
+	opacity: 0.5;
+}
+.password-control.view {
+	background: url(./img/no-view.svg) 0 0 no-repeat;
+}
+.mail{
+	width: 300px;
+	margin: 40px auto;
+}
+.knopka{
+	width: 300px;
+	height: 50px;
+	background: linear-gradient(to right, #23D2FD, #B522FF);
+	border-radius: 25px;
+	cursor: pointer;
+}
+#knop{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-decoration: none;
+	
+}
+.dopus{
+	text-align: center;
+	margin-top: 100px;
+	color: #70707D;
+
+}

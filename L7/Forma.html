@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Forma</title>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+	<main>
+		<form>
+			<div id="Text_vhody">Форма входу</div>
+			<div class="mail"><input type="email" class="email_input" placeholder="Email" name="email"></div>
+			<div class="password"><input type="password" class="password-input" placeholder="Password" name="pass">
+				<a href="#" class="password-control" ></a>
+			</div>
+			<div id="knop">
+				<input type="submit" class="knopka" value="Авторизуватися" />
+			</div>
+			<div class="dopus">В вас немає облікового запису? <a style="color: black; text-decoration: none;" href="#">Зареєструватися!</a></div>
+			<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+			<script>	
+				$('body').on('click', '.password-control', function(){
+					if ($('.password-input').attr('type') == 'password'){
+						$(this).addClass('view');
+						$('.password-input').attr('type', 'text');} 
+					else {
+						$(this).removeClass('view');
+						$('.password-input').attr('type', 'password');}
+				return false;});
+			</script>
+		</form>
+	</main>
+</body>
+</html>

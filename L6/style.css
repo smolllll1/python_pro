@@ -1,0 +1,207 @@
+html{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+header{
+	background-color: #131210;
+	height: 930px;
+}
+#logo{
+	position: absolute;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+.kontaktu{
+	color: white;
+
+}
+.login{
+	color: #135EC5;
+	background-color: white;
+	border-radius: 20px;
+	text-transform: uppercase;
+	width: 200px;
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+	box-sizing: border-box;
+	float: right;
+	margin-right: 30px;
+	margin-top: 30px;
+	font-weight: bolder;
+}
+#fone{
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+#fone_img{
+	position: relative;
+	right: 10px;
+	top: 13px;
+	width: 35px;
+}
+.header_car{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+#p1{
+	text-align: center;
+	color: white;
+}
+
+.text_login{
+	color: white;
+	background-color: #135EC5;
+	width: 140px;
+}
+.footer_text{
+	color: #3C3C3C;
+	font-size: 30px;
+	float: right;
+	width: 25%;
+	padding-top: 30px;
+}
+.footer_border{
+	border-bottom: #3C3C3C solid 1px;
+	padding-right: 140px;
+	padding-bottom: 10%;
+	
+	
+}
+.text{
+	text-align: center;
+	color: #C1C1C1;
+	margin-top: 50px;
+}
+#marku{
+	text-align: center;
+	border-bottom: 2px solid #EBEBEB;
+}
+.img{
+	margin: 50px 4%;
+}
+.BMW_Series{
+	height: 630px;
+}
+.left{
+	float: left;
+	margin-bottom: 10px;
+}
+.pading{
+	box-sizing: border-box;
+	padding-top: 140px;
+	padding-left: 300px;
+}
+.right{
+	float: right;
+}
+.width50{
+	width: 50%;
+
+}
+#text1{
+	color: #135EC5;
+	font-size: 60px;
+	margin-top: 140px;
+	font-weight: bolder;
+}
+#text2{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	color: #3C3C3C;
+}
+.BMW_Left{
+	background-color: #135EC5;
+	height: 540px;
+	text-align: center;
+}
+.text3{
+	color: white;
+	font-weight: bolder;
+	font-size: 60px;
+	padding-top: 100px;
+}
+.knopka3{
+	color: white;
+	background-color: #135EC5;
+	border: 2px solid white;
+	display: block;
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+}
+#nav{
+	height: 500px;
+	width: 30%;
+	float: left;
+	background-color: white;
+	box-sizing: border-box;
+	padding: 50px;
+	text-align: center;
+}
+#section{
+	height: 500px;
+	width: 70%;
+	float: right;
+	padding-right: 6%;
+	padding-left: 6%;
+	box-sizing: border-box;
+}
+#main{
+	margin-top: 200px;
+	height: 500px;
+}
+#div_nav{
+	height: 200px;
+	background-color: #135EC5;
+}
+#div_left{
+	float: left;
+	width: 50%;
+	height: 500px;
+	background-color: white;
+}
+#div_right{
+	float: right;
+	width: 50%;
+	height: 500px;
+	background-color: #135EC5;
+}
+.cena{
+	color: #2AB43E;
+	font-weight: bolder;
+	font-size: 30px;
+	float: left;
+	margin-left: 50px;
+}
+.knopka4{
+	border-radius: 20px; 
+	text-transform: uppercase; 
+	background-color: #E2E2E2; 
+	width:160px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: right;
+	margin-right: 50px;
+}
+.clova{
+	padding-top: 100px;
+	width: 23%;
+	padding-left: 70px;
+	float: left;
+	box-sizing: border-box;
+	color: #C5C5C5;
+	font-size: 30px;
+}
+.clova_pad{
+	border-bottom: 2px solid #C5C5C5;
+	color: #C5C5C5;
+	font-size: 30px;
+	
+}

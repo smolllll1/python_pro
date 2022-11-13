@@ -1,0 +1,57 @@
+html{
+	font-family: 'Lobster', cursive;
+	font-family: 'Pacifico', cursive;
+}
+p{
+	font-size: 36px;
+	color: #501200;
+	padding-top: 10px;
+	margin-left: 10px;
+}
+#menu{
+	background-color: #F2F2F2;
+	margin: 20px 260px 20px 260px;
+}
+.forst::after{
+	content: "1.52";
+}
+.second::after{
+	content: "1.23";
+}
+.second1::after{
+	content: "1.41";
+}
+.second2::after{
+	content: "1.03";
+}
+.jys::after{
+	content: "0.4";
+}
+.breakfast{
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	font-size: 30px;
+	color: #B58631;
+}
+.image{
+	width: 200px;
+	border-radius: 30px;
+	margin: 5px 10px 10px 10px;
+}
+.br1{
+	min-height: 150px;
+}
+.br2{
+	position: absolute;
+}
+.br3{
+	margin-left: 225px;
+}
+.cena{
+	color: #959705;
+	font-size: 25px;
+	margin-right: 10px;
+	float: right;
+	display: inline-block;
+}
