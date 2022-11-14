@@ -13,8 +13,8 @@
 	<main>
 		<form>
 			<div id="Text_vhody">Форма входу</div>
-			<div class="mail"><input type="email" class="email_input" placeholder="Email" name="email"></div>
-			<div class="password"><input type="password" class="password-input" placeholder="Password" name="pass">
+			<div class="mail"><input type="email" placeholder="Email" name="email"></div>
+			<div class="password"><input type="password" id="less_password" placeholder="Password" name="pass">
 				<a href="#" class="password-control" ></a>
 			</div>
 			<div id="knop">
@@ -24,9 +24,9 @@
 			<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
 			<script>	
 				$('body').on('click', '.password-control', function(){
-					if ($('.password-input').attr('type') == 'password'){
+					if ($('#less_password').attr('type') == 'password'){
 						$(this).addClass('view');
-						$('.password-input').attr('type', 'text');} 
+						$('#less_password').attr('type', 'text');} 
 					else {
 						$(this).removeClass('view');
 						$('.password-input').attr('type', 'password');}

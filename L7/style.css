@@ -1,4 +1,4 @@
-main{
+body{
 	background-color: #B3AFAF;
 	margin-left: 200px;
 	margin-right: 200px;
@@ -7,38 +7,31 @@ main{
 }
 form{
 	background-color: white;
-	width: 400px;
+	width: 340px;
 	height: 500px;
 	margin-right: auto;
 	margin-left: auto;
 	border-radius: 15px;
+	padding: 40px;
 }
 input{
 	border: none;
+	height: 30px;
+	font-size: 18px;
+	border-bottom: 2px solid #B3AFAF;
+	width: 100%;
 }
 #Text_vhody{
 	font-size: 30px;
 	text-align: center;
-	padding-top: 70px;
+	padding-top: 25px;
+}
+.mail{
+	margin-top: 40px;
 }
 .password{
-	width: 300px;
-	margin: 40px auto;
+	margin-top: 40px;
 	position: relative;
-}
-.password-input{
-	width: 100%;
-	padding: 5px 0;
-	height: 30px;
-	font-size: 18px;
-	border-bottom: 2px solid #B3AFAF;
-}
-.email_input{
-	width: 100%;
-	padding: 5px 0;
-	height: 30px;
-	font-size: 18px;
-	border-bottom: 2px solid #B3AFAF;
 }
 .password-control {
 	position: absolute;
@@ -53,10 +46,6 @@ input{
 .password-control.view {
 	background: url(./img/no-view.svg) 0 0 no-repeat;
 }
-.mail{
-	width: 300px;
-	margin: 40px auto;
-}
 .knopka{
 	width: 300px;
 	height: 50px;
@@ -65,6 +54,7 @@ input{
 	cursor: pointer;
 }
 #knop{
+	margin-top: 40px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -73,7 +63,7 @@ input{
 }
 .dopus{
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 190px;
 	color: #70707D;
 
 }
