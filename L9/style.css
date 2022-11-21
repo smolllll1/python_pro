@@ -1,0 +1,41 @@
+body{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+.header{
+	display: flex;
+	padding-top: 20px;
+	justify-content: space-between;
+}
+.header div{
+	padding-top: 20px;
+}
+.main{
+	display: flex;
+	padding-top: 50px;
+}
+.roshen{
+	padding-top: 30px;
+	font-weight: bolder;
+	font-size: 25px;
+	padding-right: 50px;
+	text-overflow: ;
+}
+.div{
+	display: flex;
+	flex-direction: column;
+}
+.img{
+	width: 100%;
+	height: auto;
+}
+.text{
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-top: 30px;
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 60px;
+}
