@@ -1,13 +1,13 @@
-body{
-	padding-left: 100px;
-	padding-right: 100px;
+.width{
+	width: 1000px;
+	margin: 0 auto;
 }
 .header{
 	display: flex;
 	padding-top: 20px;
 	justify-content: space-between;
 }
-.header div{
+.header a{
 	padding-top: 20px;
 }
 .main{
@@ -38,4 +38,12 @@ footer{
 	flex-direction: row;
 	justify-content: space-between;
 	padding-top: 60px;
+}
+.sulka{
+	text-decoration: none;
+	color: black;
+
+}
+.sulka:hover{
+	color: blue;
 }
