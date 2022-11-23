@@ -1,0 +1,53 @@
+.cer{
+	min-height: 500px;
+	background-image: url(./img/fon.jpg);
+	background-size: cover;
+	color: white;
+}
+.color_sulka{
+	    --bs-nav-link-color: #FDF5E6;
+	    --bs-nav-link-hover-color: #0aa321;
+	    font-size: 20px;
+}
+.color_sulka1{
+	--bs-nav-link-color: #00A835;
+}
+.img1{
+	padding-top: 20px;
+}
+.logo{
+	padding-top: 10px;
+}
+.bord{
+	border: none;
+}
+.fon2{
+	min-height: 400px;
+	background-size: cover;
+	background-image: url(./img/fon2.jpg);
+}
+.Usygi{
+	text-align: center;
+	padding-top: 10px;
+	font-size: 40px;
+	color: white;
+}
+.card1{
+	--bs-card-bg: none;
+}
+.text_color{
+	color: white;
+	text-align: center;
+}
+.img-png{
+	width: 200px;
+	margin: auto;
+}
+.bg_footer{
+	min-height: 170px;
+	background-color: #000000;
+	color: white;
+}
+.text_footer{
+	font-size: 12px;
+}
