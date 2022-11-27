@@ -1,3 +1,31 @@
+.dropdown{
+		display: none;
+	}
+@media screen and (max-width: 600px) {
+	ul.mobile_bar li a{
+		color: aqua;
+	}
+	.mobile_bar{
+		display: none;
+	}
+	.dropdown{
+		display: flex;
+		flex-direction: row-reverse;
+		margin-right: 20px;
+		padding-top: 10px;
+	}
+	.block{
+		display: block;
+	}
+}
+.byrger{
+	background: transparent;
+	border: none;
+	height: 50px;
+	width: 50px;
+	background-image: url(./img/gambyrger.png);
+	background-size: 50px 50px;
+}
 .cer{
 	min-height: 500px;
 	background-image: url(./img/fon.jpg);
@@ -17,6 +45,13 @@
 }
 .logo{
 	padding-top: 10px;
+}
+.form{
+	height: 360px;
+	width: 300px;
+	background-color: rgba(0, 0, 0, 0.7);
+	margin-right: 50px;
+	
 }
 .bord{
 	border: none;
@@ -50,4 +85,26 @@
 }
 .text_footer{
 	font-size: 12px;
+}
+.text_big{
+	font-size: 60px;
+}
+.text_form{
+	text-transform: uppercase;
+	font-size: 20px;
+	padding-top: 50px;
+}
+.input{
+	background: transparent;
+	border: none;
+	border-bottom: white solid 1px;
+	text-align: center;
+	padding-top: 30px;
+}
+.button{
+	background-color: #0AA321;
+	color: white;
+	margin-top: 30px;
+	width: 190px;
+	border: none;
 }
