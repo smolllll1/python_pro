@@ -20,7 +20,7 @@ else:
     print("It's not Zero!")
 #4. Write a Python program to check if a given number is Even or Odd.
 a = int(input('enter a number: '))
-if a % 2 == 0:
+if a % 2:
     print('is Even')
 else:
     print('is Odd')
@@ -28,9 +28,11 @@ else:
 a = int(input('enter a number: '))
 b = int(input('enter a number: '))
 c = int(input('enter a number: '))
-if a > b and a > c:
-    print(str(a) + ': largest number')
-if b > a and b >c:
+if a < b and b > c:
     print(str(b) + ': largest number')
+if b < a and a > c:
+    print(str(a) + ': largest number')
 if c > a and c > b:
     print(str(c) + ': largest number')
+else:
+    print(': there are similar numbers')
