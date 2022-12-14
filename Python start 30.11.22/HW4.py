@@ -3,11 +3,10 @@
 #половини дорівнює сумі цифр його правої половини.
 #Наприклад, 1322 є щасливим квитком, тому що 1 + 3 = 2 + 2.
 
-x = list(input("Введи свій щасливий квиток: "))
-print(x)
-for i in range(len(x)):
-    x[i]=int(x[i])
-if not len(x)%2 and sum(x[:(int(len(x)/2))]) == sum(x[-(int(len(x)/2)):]):
+x = input("Введи свій щасливий квиток: ")
+
+x = list(map(int,x))
+if not len(x)%2 and sum(x[:len(x)//2]) == sum(x[len(x)//2:]):
     print('Ваш квиток щасливий!')
 else:
     print('Пощастить іншим разом')
@@ -18,10 +17,8 @@ else:
 
 y = []
 x =list(input("Введи число або слово: "))
-print(x)
 for i in reversed(x):
     y.append(i)
-print(y)
 if x == y:
     print('Паліндром!')
 else:
