@@ -18,7 +18,7 @@ for i in x:
     key = y.get(i)
     if key:
         y[i] = key + 1
-    if i == ' ':
+    elif i == ' ':
         continue
     else:
         y[i] = 1
