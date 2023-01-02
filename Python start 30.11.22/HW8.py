@@ -34,16 +34,16 @@ def sum(text):
     return (len(text.split()))
 print(sum(input('text: ')))
 
-# Напишіть функцію, яка переводить число, що означає кількість доларів і центів, в прописний формат. Наприклад:
+# 5. Напишіть функцію, яка переводить число, що означає кількість доларів і центів, в прописний формат. Наприклад:
 # > 123,34
 # > one hundred twenty three dollars thirty four cents
 
-a = input('enter the dollar amount (max 9999.99): ')
+a = input('enter the dollar amount (max 999999999.99): ')
 def conversion(value: str):
     dollars = {1: 'one',2: 'two', 3: 'three', 4: 'four', 5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine',
                10: 'ten', 11: 'eleven', 12: 'twelve', 13: 'thirteen', 14: 'fourteen', 15: 'fifteen', 16: 'sixteen', 17: 'seventeen', 18: 'eighteen', 19: 'nineteen',
                20: 'twenty', 30: 'thirty', 40: 'forty', 50: 'fifty', 60: 'sixty', 70: 'seventy', 80: 'eighty', 90: 'ninety',
-               100:'hundred', 1000:'thousand', 0: 'zero'}
+               100:'hundred', 1000:'thousand', 1000000:'million', 0:'zero'}
     for i in value:
         if i == '.':
             b = value.split('.')
@@ -52,40 +52,37 @@ def conversion(value: str):
             b = value.split(',')
     if len(b) == 1:
         b.append('00')
-    if int(b[1]) < 10:
-        b[1] = int(b[1])*10
-    s = 'dollars'
-    c = 'cents'
-    cents = int(b[1]) % 10
-    ones = int(b[0]) % 10
-    tens = int(b[0]) % 100
-    hundrs = int(b[0]) // 100 % 10
-    thousands = int(b[0]) // 1000
-    if int(b[0]) > 19 and int(ones) > 0 and int(b[0]) <= 99:
-        if int(b[1]) > 19 and int(cents) > 0:
-            return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(b[0]) - int(ones)], dollars[int(ones)], s, dollars[int(b[1]) - int(cents)], dollars[int(cents)], c))
-        return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(b[0]) - int(ones)], dollars[int(ones)], s, dollars[int(b[1])], c))
-    if int(b[0]) > 99 and int(ones) > 0 and int(b[0]) <= 999:
-        if int(b[1]) > 19 and int(cents) > 0 and int(tens) > 19:
-            return ' '.join((dollars[int(hundrs)], dollars[100], dollars[int(tens) - int(ones)], dollars[int(ones)], s, dollars[int(b[1]) - int(cents)], dollars[int(cents)], c))
-        if int(b[1]) > 19 and int(cents) > 0 and int(tens) < 19:
-            return ' '.join((dollars[int(hundrs)], dollars[100], dollars[int(tens)], s, dollars[int(b[1]) - int(cents)], dollars[int(cents)], c))
-        if int(b[1]) < 19 and int(cents) > 0 and int(tens) > 19:
-            return ' '.join((dollars[int(hundrs)], dollars[100], dollars[int(tens) - int(ones)], dollars[int(ones)], s, dollars[int(b[1])], c))
-        if int(b[1]) < 19 and int(cents) > 0 and int(tens) < 19:
-            return ' '.join((dollars[int(hundrs)], dollars[100], dollars[int(tens)], s, dollars[int(b[1])], c))
-        return ' '.join((dollars[int(hundrs)], dollars[100], dollars[int(tens) - int(ones)], dollars[int(ones)], s, dollars[int(b[1])], c))
-    if int(b[0]) > 999 and int(ones) > 0:
-        if int(b[1]) > 19 and int(cents) > 0 and int(tens) > 19:
-            return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(hundrs)], dollars[100], dollars[int(tens) - int(ones)], dollars[int(ones)], s, dollars[int(b[1]) - int(cents)], dollars[int(cents)], c))
-        if int(b[1]) < 19 and int(cents) > 0 and int(tens) > 19:
-            return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(hundrs)], dollars[100], dollars[int(tens) - int(ones)], dollars[int(ones)], s, dollars[int(b[1])], c))
-        if int(b[1]) > 19 and int(cents) > 0 and int(tens) < 19:
-            return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(hundrs)], dollars[100], dollars[int(tens)], s, dollars[int(b[1]) - int(cents)], dollars[int(cents)], c))
-        if int(b[1]) < 19 and int(cents) > 0 and int(tens) < 19:
-            return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(hundrs)], dollars[100], dollars[int(tens)], s, dollars[int(b[1])], c))
-        return ' '.join((dollars[int(thousands)], dollars[1000], dollars[int(hundrs)], dollars[100], dollars[int(tens) - int(ones)], dollars[int(ones)], s, dollars[int(b[1])], c))
-    return dollars[int(b[0])]
+    def cents(c: int):
+        cents = c % 10
+        if c < 10 and (c//10) != 0:
+            return ' '.join((dollars[c * 10], 'cents'))
+        if c < 10 and (c // 10) == 0:
+            return ' '.join((dollars[c], 'cents'))
+        if c >= 10 and c < 20:
+            return ' '.join((dollars[c], 'cents'))
+        if c >= 19:
+            return ' '.join((dollars[c - cents], dollars[cents], 'cents'))
+    def tens(t):
+        if t == 0:
+            pass
+        tens = t % 10
+        if t < 20 and t != 0:
+            return ''.join(dollars[t])
+        if t >= 19 and t < 100:
+            return ' '.join((dollars.get(t - tens), dollars.get(tens)))
+        if t >= 100 and t < 1000:
+            if t % 100 >= 19:
+                return ' '.join((dollars.get(t // 100), dollars[100], dollars.get((t % 100 - tens)), dollars.get(tens)))
+            if t % 100 < 20 and t % 100 != 0:
+                return ' '.join((dollars.get(t // 100), dollars[100], dollars.get(t % 100)))
+            if t % 100 < 20 and t % 100 == 0:
+                return ' '.join((dollars.get(t // 100), dollars[100]))
+    u = [tens((int(b[0]) // 1000000) % 1000000), dollars[1000000], tens((int(b[0]) // 1000)%1000), dollars[1000], tens(int(b[0]) % 1000), 'dollars', cents(int(b[1]))]
+    o = []
+    for i in range(len(u)):
+        if u[i] != None and u[i-1] != None:
+            o.append(u[i])
+    return ' '.join(o)
 print(conversion(a))
 
 # 6. Напишіть функцію, яка переводить ціле число з римського запису до десяткового.
