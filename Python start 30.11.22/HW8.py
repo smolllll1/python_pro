@@ -90,11 +90,36 @@ print(conversion(a))
 
 a = input('Roman numerals: ')
 def roman(value: str):
-    b = {'I':1, 'II':2, 'III':3, 'IV':4, 'V':5, 'VI':6, 'VII':7, 'VIII':8, 'IX':9, 'X':10}
-    if value in b:
-        return b[value]
-    for i in range(len(value)):
-        c = list(value[i:])
-        if ''.join(c) in b:
-            return ((10*i)+b[''.join(c)])
+    units = {'I': '1', 'II': '2', 'III': '3', 'IV': '4', 'V': '5', 'VI': '6', 'VII': '7', 'VIII': '8', 'IX': '9'}
+    tens = {'X': '1', 'XX': '2', 'XXX': '3', 'XL': '4', 'L': '5', 'LX': '6', 'LXX': '7', 'LXXX': '8', 'XC': '9'}
+    hundreds = {'C': '1', 'CC': '2', 'CCC': '3', 'CD': '4', 'D': '5', 'DC': '6', 'DCC': '7', 'DCCC': '8', 'CM': '9'}
+    thousands = {'M': '1', 'MM': '2','MMM': '3'}
+    u = []
+    t = []
+    n = []
+    s = []
+    l = 0
+    r = 0
+    b = 0
+    for i in value:
+        if i in thousands and r <= 3:
+            r += 1
+            u.append(i)
+        if i in hundreds and b <= 3:
+            b += 1
+            t.append(i)
+        if i in tens and l <= 3:
+            l += 1
+            n.append(i)
+        if i in units:
+            s.append(value[value.index(i):])
+            break
+    f = []
+    m = [thousands.get(''.join(u)), hundreds.get(''.join(t)), tens.get(''.join(n)), units.get(''.join(s))]
+    for i in range(len(m)):
+        if m[i]:
+            f.append(m[i])
+        if m[i] == None and f:
+            f.append('0')
+    return ''.join(f)
 print(roman(a))
