@@ -1,3 +1,9 @@
+#Необхідно підготувати звіт про витрати членів родини на новорічні свята.
+#Звіт повинен включати наступне:
+#1. Яка загальна сума витрат по кожній категорії товарів?
+#2. Скільки грошей витратив кожен член родини?
+#2. Яку кількість покупок та на яку загальну суму зробив введений користувачем через input член родини?
+
 def spliting(x: str)->list:
     return [line.strip().replace('.(0, 99)$ ', ' ').split() for line in x]
 
@@ -37,18 +43,19 @@ def amounts_operation(x: list)->dict:
 f = open('test.txt', 'r')
 
 no_cents = spliting(f)
-c = amounts_product(names())
-y = amounts_product(product())
-b = amounts_operation(names())
-a = input("ВВедіть ім'я: ")
-print(f'Потратив: {c[a]} $. Зробив(ла): {b[a]} покупок')
+many = amounts_product(names())
+category = amounts_product(product())
+number = amounts_operation(names())
+value = input("ВВедіть ім'я: ")
+print(f'Потратив(ла): {many[value]} $. Зробив(ла): {number[value]} покупок')
 
 print('\nЗагальна сума витрат по кожній категорії: ')
-for i in y:
-    print(f'{i}: {y[i]}')
+for i in category:
+    print(f'{i}: {category[i]}')
+
 
 print('\nKожен член родини витратив: ')
-for i in c:
-    print(f'{i}: {c[i]}')
+for i in many:
+    print(f'{i}: {many[i]}')
 f.close()
 
