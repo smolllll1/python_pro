@@ -1,4 +1,4 @@
-# 1. Реалізуйте функцію, параметрами якої є два числа та рядок. Повертає вона конкатенацію рядка із сумою чисел.
+'''# 1. Реалізуйте функцію, параметрами якої є два числа та рядок. Повертає вона конкатенацію рядка із сумою чисел.
 
 def concatenation (a, b, string):
     return (f'{a + b}' + string)
@@ -33,7 +33,7 @@ print(search(a, is_list))
 def sum(text):
     return (len(text.split()))
 print(sum(input('text: ')))
-
+'''
 # 5. Напишіть функцію, яка переводить число, що означає кількість доларів і центів, в прописний формат. Наприклад:
 # > 123,34
 # > one hundred twenty three dollars thirty four cents
@@ -56,12 +56,15 @@ def conversion(value: str):
         cents = c % 10
         if c < 10 and (c//10) != 0:
             return ' '.join((dollars[c * 10], 'cents'))
+        if c < 10 and (c//10) == 0 and len(str(c)) < 2:
+            return ' '.join((dollars[c * 10], 'cents'))
         if c < 10 and (c // 10) == 0:
             return ' '.join((dollars[c], 'cents'))
         if c >= 10 and c < 20:
             return ' '.join((dollars[c], 'cents'))
         if c >= 19:
             return ' '.join((dollars[c - cents], dollars[cents], 'cents'))
+
     def tens(t):
         if t == 0:
             pass
