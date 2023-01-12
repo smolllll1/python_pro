@@ -34,7 +34,7 @@ class Order:
 
 
     def __str__(self):
-        return  f'\n{self.shoper}\nCумарнa вартості замовлення: {sum(self.suma.values())} $'
+        return  f'\n{"*"*40}\n{self.shoper}\nCумарнa вартості замовлення: {sum(self.suma.values())} $\n{"*"*40}'
 
 
 x1 = Goods('120', 'хімія', '20*30')
