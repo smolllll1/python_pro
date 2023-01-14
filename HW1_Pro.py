@@ -23,10 +23,10 @@ class Order:
     def __init__(self, shoper, product):
         self.shoper = shoper
         self.product = product
-        self.suma = {}
-    def suma1(self, prace):
+    def total_price(self, prace):
         self.prace = prace.price
         self.tovar = prace.product
+        self.suma = {}
         if self.tovar in self.suma:
             self.suma[self.tovar] = self.suma.get(self.tovar) + int(self.prace)
         else:
@@ -34,20 +34,20 @@ class Order:
 
 
     def __str__(self):
-        return  f'\n{"*"*40}\n{self.shoper}\nCумарнa вартості замовлення: {sum(self.suma.values())} $\n{"*"*40}'
+        return  f'\n{"*"*40}\n{self.shoper}\nThe total cost of the order: {sum(self.suma.values())} $\n{"*"*40}'
 
 
-x1 = Goods('120', 'хімія', '20*30')
-x2 = Goods('100', 'кулінарія', '50*60')
-x3 = Goods('600', 'кондитер', '80*90')
+x1 = Goods('120', 'chemistry', '20*30')
+x2 = Goods('100', 'cooking', '50*60')
+x3 = Goods('600', 'confectioner', '80*90')
 
-shoper_1 = Shopper('Іван', 'Іванов', '099-999-99-99')
-shoper_2 = Shopper('Іван1', 'Іванов1', '088-888-88-88')
-shoper_3 = Shopper('Іван2', 'Іванов2', '077-777-77-77')
+shoper_1 = Shopper('Ivan', 'Ivanov', '099-999-99-99')
+shoper_2 = Shopper('Ivan1', 'Ivanov1', '088-888-88-88')
+shoper_3 = Shopper('Ivan2', 'Ivanov2', '077-777-77-77')
 
 order = Order(shoper_1, x1)
-order.suma1(x1)
-order.suma1(x2)
-order.suma1(x1)
-order.suma1(x3)
+order.total_price(x1)
+order.total_price(x2)
+order.total_price(x1)
+order.total_price(x3)
 print(order)
