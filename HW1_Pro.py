@@ -23,11 +23,16 @@ try:
 except Incorrect_number as error:
     print(error)
 
-print(order_1)
 
 order_2 = Cart_modul.Cart(customer_2)
 try:
     order_2.add_product(x_2, 10)
+    order_2.add_product(x_2, 2)
+    order_2.add_product(x_3, 27)
+    order_2.add_product(x_1)
 except Incorrect_number as error:
     print(error)
 print(order_2)
+for i in order_2:
+    print(i)
+# print(order_2[2])

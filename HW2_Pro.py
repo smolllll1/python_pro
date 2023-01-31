@@ -33,11 +33,10 @@ finally:
     gpuop_2.remove_student(m2)
 
 
-
-print(gpuop_2)
-print(gpuop_1)
-
 search_name = 'Petrov'
 res = gpuop_1.search(search_name)
 print('\n', '*'*40, '\n')
-print('*'.join(map(str, res)))
+#print('*'.join(map(str, res)))
+for i in gpuop_1:
+    print(i)
+print(gpuop_1[1:])
